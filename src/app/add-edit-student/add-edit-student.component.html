@@ -1,0 +1,45 @@
+<legend>Student Portal</legend>
+  <div class="row">
+    <div class="col col-md-8">
+      <form [formGroup]="studentForm">
+        <div class="mb-3">
+          <label for="studentName" class="form-label">Student Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="studentName"
+            formControlName="studentName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="studentEmail" class="form-label">Student Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="studentEmail"
+            formControlName="studentEmail"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="studentAddress" class="form-label">Student Address</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="studentAddress"
+            formControlName="studentAddress"
+          >
+          </textarea>
+        </div>
+        <div class="mb-3">
+          <label for="studentAge" class="form-label">Student Age</label>
+          <input
+            type="number"
+            class="form-control"
+            id="studentAge"
+            formControlName="studentAge"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+      </form>
+    </div>
+  </div>

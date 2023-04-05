@@ -1,0 +1,30 @@
+<div class="row">
+        <div class="col-md-12">
+            <a [routerLink]="'add-edit'"><i class="fa fa-user-plus" aria-hidden="true"></i> Student</a>
+        </div>
+        <div class="ror">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <th>Student Name</th>
+                        <th>Student Email</th>
+                        <th>Student Address</th>
+                        <th>Student Age</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let student of students">
+                            <td>{{student.studentName}}</td>
+                            <td>{{student.studentEmail}}</td>
+                            <td>{{student.studentAddress}}</td>
+                            <td>{{student.studentAge}}</td>
+                            <td>
+                                <span class="m-2" (click)="editStudent(student.id)"><i class="fa fa-edit"></i></span>
+                                <span (click)="deleteStudent(student.id)"><i class="fa fa-trash"></i></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>
